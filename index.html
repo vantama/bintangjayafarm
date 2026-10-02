@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bintang Jaya Farm - Penyedia aneka tanaman hias berkualitas untuk mempercantik rumah, ruangan, dan halaman. Disesuaikan dengan kebutuhan dan budget Anda.">
+  <meta name="keywords" content="Bintang Jaya Farm, tanaman hias, jual tanaman hias, monstera, aglaonema, tanaman indoor, tanaman outdoor, dekorasi rumah, UMKM tanaman">
+  <meta name="author" content="Bintang Jaya Farm">
+  <title>Bintang Jaya Farm | Pusat Tanaman Hias Asri, Indah & Terjangkau</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Pro / Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar" id="topBar">
+    <div class="container announcement-content">
+      <span><i class="fa-solid fa-sparkles"></i> <strong>Spesial Minggu Ini:</strong> Diskon hingga 25% + Konsultasi Gratis Tata Ruang Tanaman Hijau!</span>
+      <div class="announcement-actions">
+        <a href="#katalog"><i class="fa-solid fa-tag"></i> Lihat Promo</a>
+        <button class="close-topbar" id="closeTopBarBtn" aria-label="Tutup Pengumuman"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header & Navbar -->
+  <header class="site-header" id="navbar">
+    <div class="container header-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-icon-wrap">
+          <i class="fa-solid fa-seedling"></i>
+        </div>
+        <div class="logo-text">
+          <span class="brand-title">Bintang Jaya Farm</span>
+          <span class="brand-tagline">Botanical & Nursery</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-links">
+          <li><a href="#beranda" class="active"><i class="fa-solid fa-house"></i> Beranda</a></li>
+          <li><a href="#tentang"><i class="fa-solid fa-circle-info"></i> Tentang</a></li>
+          <li><a href="#katalog"><i class="fa-solid fa-leaf"></i> Katalog</a></li>
+          <li><a href="#finder"><i class="fa-solid fa-wand-magic-sparkles"></i> Cari Tanaman</a></li>
+          <li><a href="#layanan"><i class="fa-solid fa-hand-holding-heart"></i> Layanan</a></li>
+          <li><a href="#testimoni"><i class="fa-solid fa-star"></i> Ulasan</a></li>
+          <li><a href="#kontak"><i class="fa-solid fa-phone"></i> Kontak</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <a href="https://wa.me/6281234567890?text=Halo%20Bintang%20Jaya%20Farm,%20saya%20ingin%20konsultasi%20pilihan%20tanaman%20hias" 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="btn btn-whatsapp-header"
+           id="btnWaHeader">
+          <i class="fa-brands fa-whatsapp"></i>
+          <span>Chat WhatsApp</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Buka Menu Navigasi">
+          <i class="fa-solid fa-bars-staggered"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay & Menu -->
+  <div class="mobile-drawer-overlay" id="drawerOverlay"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <div class="logo-text">
+        <span class="brand-title">Bintang Jaya Farm</span>
+        <span class="brand-tagline">Solusi Tanaman Hias UMKM</span>
+      </div>
+      <button class="drawer-close" id="drawerCloseBtn" aria-label="Tutup Menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#beranda" class="drawer-link"><i class="fa-solid fa-house"></i> Beranda</a></li>
+      <li><a href="#tentang" class="drawer-link"><i class="fa-solid fa-circle-info"></i> Tentang Kami</a></li>
+      <li><a href="#katalog" class="drawer-link"><i class="fa-solid fa-leaf"></i> Katalog Tanaman</a></li>
+      <li><a href="#finder" class="drawer-link"><i class="fa-solid fa-wand-magic-sparkles"></i> Rekomendasi Tanaman</a></li>
+      <li><a href="#layanan" class="drawer-link"><i class="fa-solid fa-hand-holding-heart"></i> Layanan Kami</a></li>
+      <li><a href="#tips" class="drawer-link"><i class="fa-solid fa-book-open"></i> Tips Perawatan</a></li>
+      <li><a href="#testimoni" class="drawer-link"><i class="fa-solid fa-star"></i> Testimoni</a></li>
+      <li><a href="#faq" class="drawer-link"><i class="fa-solid fa-circle-question"></i> Tanya Jawab (FAQ)</a></li>
+      <li><a href="#kontak" class="drawer-link"><i class="fa-solid fa-phone"></i> Kontak & Pesanan</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="https://wa.me/6281234567890?text=Halo%20Bintang%20Jaya%20Farm" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp w-100">
+        <i class="fa-brands fa-whatsapp"></i> Hubungi Langsung
+      </a>
+    </div>
+  </div>
+
+  <main id="mainContent">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="beranda">
+      <div class="hero-bg-decor decor-1"></div>
+      <div class="hero-bg-decor decor-2"></div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <i class="fa-solid fa-seedling"></i>
+            <span>UMKM Florikultura Terpercaya</span>
+          </div>
+
+          <h1 class="hero-title">
+            Ciptakan Suasana <span class="text-highlight">Hijau, Asri</span> & Menenangkan di Setiap Ruang.
+          </h1>
+
+          <p class="hero-subtitle">
+            <strong>Bintang Jaya Farm</strong> menyediakan aneka ragam tanaman hias berkualitas untuk mempercantik rumah, ruangan kerja, maupun pekarangan. Kami menghadirkan tanaman pilihan yang dapat disesuaikan dengan selera, kebutuhan tata ruang, serta budget Anda.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#katalog" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-compass"></i> Jelajahi Katalog
+            </a>
+            <a href="#finder" class="btn btn-secondary btn-lg">
+              <i class="fa-solid fa-wand-magic-sparkles"></i> Rekomendasi Cepat
+            </a>
+          </div>
+
+          <!-- Trust Badges & Highlights -->
+          <div class="hero-stats">
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fa-solid fa-plant-wilt"></i></div>
+              <div class="stat-data">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">Pilihan Tanaman</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+              <div class="stat-data">
+                <span class="stat-number">1.500+</span>
+                <span class="stat-label">Pelanggan Puas</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon"><i class="fa-solid fa-shield-heart"></i></div>
+              <div class="stat-data">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Garansi Segar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Floating Plant Card Showcase -->
+        <div class="hero-visual">
+          <div class="hero-card-main">
+            <div class="hero-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1614594975525-e45190c55d0b?auto=format&fit=crop&w=800&q=80" alt="Monstera Deliciosa Bintang Jaya Farm" class="hero-main-img" id="heroMainImg" loading="lazy">
+              <span class="hero-floating-tag best-seller">
+                <i class="fa-solid fa-fire"></i> Best Seller
+              </span>
+            </div>
+            <div class="hero-card-details">
+              <div class="card-meta">
+                <span class="plant-type"><i class="fa-solid fa-house-chimney-window"></i> Indoor & Patio</span>
+                <div class="plant-rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half-stroke"></i>
+                  <span>(4.9)</span>
+                </div>
+              </div>
+              <h3 class="hero-card-title">Monstera Deliciosa King</h3>
+              <p class="hero-card-desc">Daun rimbun, tebal berkarakter, siap menghidupkan ruang tamu minimalis Anda.</p>
+              <div class="hero-card-footer">
+                <div class="price-box">
+                  <span class="price-label">Mulai Dari</span>
+                  <span class="price-val">Rp 85.000</span>
+                </div>
+                <a href="#katalog" class="btn btn-outline-sm">
+                  <span>Lihat Detail</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating Micro Badges -->
+          <div class="floating-badge badge-top-right">
+            <div class="badge-icon-bg bg-emerald">
+              <i class="fa-solid fa-wind"></i>
+            </div>
+            <div class="badge-info">
+              <strong>Pembersih Udara</strong>
+              <span>Menyerap polutan ruangan</span>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom-left">
+            <div class="badge-icon-bg bg-amber">
+              <i class="fa-solid fa-wallet"></i>
+            </div>
+            <div class="badge-info">
+              <strong>Harga Bersahabat</strong>
+              <span>Disesuaikan budget Anda</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TENTANG KAMI SECTION -->
+    <section class="about-section" id="tentang">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-images-col">
+            <div class="about-image-stack">
+              <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80" alt="Kebun Bintang Jaya Farm" class="about-img-large" loading="lazy">
+              <div class="about-experience-card">
+                <div class="exp-icon"><i class="fa-solid fa-award"></i></div>
+                <div class="exp-content">
+                  <h4>Kualitas Pembibitan Terbaik</h4>
+                  <p>Dirawat dengan pupuk organik dan teknik penyiraman optimal</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-text-col">
+            <div class="section-tag">
+              <i class="fa-solid fa-circle-dot"></i> Mengenal Kami
+            </div>
+            <h2 class="section-title">
+              Bintang Jaya Farm: Mitra Hijau untuk Hunian & Ruang Kerja Impian
+            </h2>
+            <p class="section-lead">
+              <strong>Bintang Jaya Farm</strong> merupakan website dan usaha florikultura lokal yang menyediakan berbagai pilihan tanaman hias untuk mempercantik rumah, ruangan, maupun halaman. Kami menghadirkan tanaman dengan beragam jenis dan pilihan yang dapat disesuaikan dengan kebutuhan serta budget pelanggan.
+            </p>
+            <p class="section-subtext">
+              Melalui website ini, pelanggan dapat melihat pilihan tanaman, mengetahui informasi produk secara lengkap, dan menemukan tanaman yang paling sesuai untuk menciptakan suasana yang lebih hijau, asri, segar, dan nyaman di lingkungan Anda.
+            </p>
+
+            <div class="about-pillars">
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fa-solid fa-spa"></i></div>
+                <div>
+                  <h5>Koleksi Beragam & Terawat</h5>
+                  <p>Mulai dari tanaman indoor penyaring udara hingga tanaman outdoor penghias taman yang rimbun.</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <div>
+                  <h5>Fleksibel Sesuai Budget</h5>
+                  <p>Pilihan variatif dari bibit ramah kantong hingga spesimen tanaman koleksi berukuran besar.</p>
+                </div>
+              </div>
+              <div class="pillar-item">
+                <div class="pillar-icon"><i class="fa-solid fa-comments"></i></div>
+                <div>
+                  <h5>Konsultasi & Panduan Ramah</h5>
+                  <p>Kami bantu edukasi cara perawatan tanaman dari penyiraman hingga media tanam yang cocok.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-cta">
+              <a href="#finder" class="btn btn-primary">
+                <i class="fa-solid fa-magnifying-glass"></i> Temukan Tanaman Cocok
+              </a>
+              <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                <i class="fa-brands fa-whatsapp"></i> Tanya Langsung via WA
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEUNGGULAN / KENAPA MEMILIH KAMI -->
+    <section class="features-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-thumbs-up"></i> Nilai Lebih Kami</div>
+          <h2 class="section-title">Kenapa Berbelanja di Bintang Jaya Farm?</h2>
+          <p class="section-desc">Komitmen kami menghadirkan pengalaman belanja tanaman hias yang mudah, transparan, dan terpercaya bagi Anda.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon bg-green-light">
+              <i class="fa-solid fa-shield-virus"></i>
+            </div>
+            <h3>Tanaman Sehat & Bebas Hama</h3>
+            <p>Setiap tanaman melalui seleksi ketat dan karantina bebas kutu/jamur sebelum dikirim ke pelanggan.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon bg-blue-light">
+              <i class="fa-solid fa-tags"></i>
+            </div>
+            <h3>Harga UMKM Transparan</h3>
+            <p>Harga jujur dari nursery langsung tanpa perantara ganda, cocok untuk pecinta tanaman hemat maupun kolektor.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon bg-amber-light">
+              <i class="fa-solid fa-box-archive"></i>
+            </div>
+            <h3>Packing Ekstra Aman</h3>
+            <p>Pengemasan menggunakan pelindung batang, dakron daun, dan pot kokoh agar tiba dalam kondisi segar prima.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon bg-purple-light">
+              <i class="fa-solid fa-book-bookmark"></i>
+            </div>
+            <h3>Panduan Perawatan Lengkap</h3>
+            <p>Disediakan kartu panduan air, sinar matahari, serta konsultasi gratis kapan saja melalui tim Bintang Jaya Farm.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE PLANT FINDER (QUIZ WIZARD) -->
+    <section class="finder-section" id="finder">
+      <div class="container">
+        <div class="finder-card">
+          <div class="finder-header text-center">
+            <span class="finder-pill"><i class="fa-solid fa-wand-magic-sparkles"></i> Fitur Rekomendasi Cepat</span>
+            <h2 class="finder-title">Bingung Memilih Tanaman yang Cocok?</h2>
+            <p class="finder-subtitle">Pilih preferensi ruang dan kebiasaan Anda di bawah ini, kami akan tampilkan rekomendasi terbaik seketika!</p>
+          </div>
+
+          <form id="plantFinderForm" class="finder-form">
+            <div class="wizard-steps-grid">
+              
+              <!-- Step 1: Lokasi -->
+              <div class="wizard-box">
+                <label class="wizard-label"><i class="fa-solid fa-location-dot"></i> 1. Rencana Penempatan:</label>
+                <div class="wizard-options">
+                  <label class="option-chip">
+                    <input type="radio" name="location" value="indoor" checked>
+                    <span><i class="fa-solid fa-couch"></i> Dalam Ruangan (Indoor)</span>
+                  </label>
+                  <label class="option-chip">
+                    <input type="radio" name="location" value="meja">
+                    <span><i class="fa-solid fa-desktop"></i> Meja Kerja / Rak</span>
+                  </label>
+                  <label class="option-chip">
+                    <input type="radio" name="location" value="outdoor">
+                    <span><i class="fa-solid fa-tree"></i> Teras & Halaman (Outdoor)</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 2: Sinar Matahari -->
+              <div class="wizard-box">
+                <label class="wizard-label"><i class="fa-solid fa-sun"></i> 2. Kondisi Pencahayaan:</label>
+                <div class="wizard-options">
+                  <label class="option-chip">
+                    <input type="radio" name="light" value="low" checked>
+                    <span><i class="fa-solid fa-cloud"></i> Teduh / Lampu Ruangan</span>
+                  </label>
+                  <label class="option-chip">
+                    <input type="radio" name="light" value="medium">
+                    <span><i class="fa-solid fa-cloud-sun"></i> Terang Tidak Langsung</span>
+                  </label>
+                  <label class="option-chip">
+                    <input type="radio" name="light" value="high">
+                    <span><i class="fa-solid fa-sun"></i> Terkena Matahari Penuh</span>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Step 3: Waktu Perawatan / Budget -->
+              <div class="wizard-box">
+                <label class="wizard-label"><i class="fa-solid fa-droplet"></i> 3. Kesibukan Penyiraman:</label>
+                <div class="wizard-options">
+                  <label class="option-chip">
+                    <input type="radio" name="care" value="easy" checked>
+                    <span><i class="fa-solid fa-mug-hot"></i> Sangat Sibuk (Jarang Siram)</span>
+                  </label>
+                  <label class="option-chip">
+                    <input type="radio" name="care" value="regular">
+                    <span><i class="fa-solid fa-shower"></i> Bisa Siram 2-3 Hari Sekali</span>
+                  </label>
+                  <label class="option-chip">
+                    <input type="radio" name="care" value="hobby">
+                    <span><i class="fa-solid fa-heart"></i> Hobi Merawat Setiap Hari</span>
+                  </label>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Recommendation Result Box -->
+            <div class="finder-result" id="finderResult">
+              <div class="result-plant-card" id="resultCardContent">
+                <!-- Dynamically populated by JS -->
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- KATALOG PRODUK TANAMAN HIAS -->
+    <section class="catalog-section" id="katalog">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-leaf"></i> Galeri Tanaman Pilihan</div>
+          <h2 class="section-title">Katalog Tanaman Bintang Jaya Farm</h2>
+          <p class="section-desc">Pilihan tanaman hias unggulan kami yang siap menghadirkan kesegaran dan keasrian di hunian Anda. Sesuaikan dengan gaya dan budget Anda.</p>
+        </div>
+
+        <!-- Filter Controls & Search Bar -->
+        <div class="catalog-toolbar">
+          <div class="search-box">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <input type="text" id="plantSearchInput" placeholder="Cari tanaman (misal: Monstera, Sansevieria, Aglaonema)..." aria-label="Cari Tanaman">
+            <button id="clearSearchBtn" class="clear-search-btn" title="Hapus pencarian"><i class="fa-solid fa-xmark"></i></button>
+          </div>
+
+          <div class="filter-group">
+            <div class="category-tabs" id="categoryTabs">
+              <button class="cat-tab active" data-category="all"><i class="fa-solid fa-border-all"></i> Semua</button>
+              <button class="cat-tab" data-category="indoor"><i class="fa-solid fa-house-chimney"></i> Indoor</button>
+              <button class="cat-tab" data-category="outdoor"><i class="fa-solid fa-tree"></i> Outdoor</button>
+              <button class="cat-tab" data-category="air-purifier"><i class="fa-solid fa-wind"></i> Pembersih Udara</button>
+              <button class="cat-tab" data-category="low-maintenance"><i class="fa-solid fa-feather-pointed"></i> Mudah Dirawat</button>
+              <button class="cat-tab" data-category="koleksi"><i class="fa-solid fa-crown"></i> Koleksi</button>
+            </div>
+
+            <div class="budget-select-wrapper">
+              <label for="budgetFilter" class="budget-label"><i class="fa-solid fa-wallet"></i> Budget:</label>
+              <select id="budgetFilter" class="budget-select">
+                <option value="all">Semua Budget</option>
+                <option value="under50">&lt; Rp 50.000 (Ekonomis)</option>
+                <option value="50to150">Rp 50.000 - Rp 150.000 (Populer)</option>
+                <option value="above150">&gt; Rp 150.000 (Spesimen/Koleksi)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Catalog Grid Container -->
+        <div class="plant-grid" id="plantGrid">
+          <!-- Dynamically Rendered by script.js -->
+        </div>
+
+        <!-- Empty State Message -->
+        <div class="empty-state hidden" id="emptyCatalogState">
+          <div class="empty-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Tanaman Tidak Ditemukan</h3>
+          <p>Maaf, kami tidak menemukan tanaman yang sesuai dengan kata kunci atau filter yang Anda pilih.</p>
+          <button class="btn btn-secondary" id="resetCatalogFilterBtn">
+            <i class="fa-solid fa-rotate-left"></i> Reset Filter & Pencarian
+          </button>
+        </div>
+
+        <!-- Custom Order Banner -->
+        <div class="custom-inquiry-box">
+          <div class="inquiry-content">
+            <div class="inquiry-icon"><i class="fa-solid fa-comments-dollar"></i></div>
+            <div class="inquiry-texts">
+              <h3>Mencari jenis tanaman spesifik atau ingin paket taman hemat?</h3>
+              <p>Tim Bintang Jaya Farm siap mencarikan dan menyiapkan paket borongan tanaman hias sesuai anggaran yang Anda tentukan.</p>
+            </div>
+          </div>
+          <a href="https://wa.me/6281234567890?text=Halo%20Bintang%20Jaya%20Farm,%20saya%20mencari%20jenis%20tanaman%20khusus%20atau%20paket%20hemat" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-inquiry">
+            <i class="fa-brands fa-whatsapp"></i> Chat Penawaran Khusus
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAYANAN TAMBAHAN UMKM -->
+    <section class="services-section" id="layanan">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-handshake"></i> Solusi Lengkap</div>
+          <h2 class="section-title">Layanan Florikultura Bintang Jaya Farm</h2>
+          <p class="section-desc">Bukan hanya menjual tanaman, kami melayani berbagai kebutuhan penghijauan dan dekorasi ruang Anda.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-number">01</span>
+              <div class="service-icon"><i class="fa-solid fa-shop"></i></div>
+            </div>
+            <h3>Penjualan Retail & Grosir</h3>
+            <p>Melayani pembelian eceran untuk koleksi pribadi maupun partai besar untuk toko bunga, kafe, kantor, dan reseller dengan harga khusus.</p>
+            <ul class="service-perks">
+              <li><i class="fa-solid fa-check"></i> Siap kirim jumlah besar</li>
+              <li><i class="fa-solid fa-check"></i> Pot & media tanam siap display</li>
+            </ul>
+          </div>
+
+          <div class="service-card highlight-service">
+            <div class="service-header">
+              <span class="service-number">02</span>
+              <div class="service-badge"><i class="fa-solid fa-star"></i> Paling Diminati</div>
+              <div class="service-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+            </div>
+            <h3>Penataan Lanskap & Taman Minimalis</h3>
+            <p>Jasa pembuatan taman tropis, taman kering (dry garden), vertical garden, maupun penataan tanaman sudut ruangan agar tampak proporsional dan estetik.</p>
+            <ul class="service-perks">
+              <li><i class="fa-solid fa-check"></i> Survei & konsultasi tata letak</li>
+              <li><i class="fa-solid fa-check"></i> Disesuaikan pencahayaan hunian</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-number">03</span>
+              <div class="service-icon"><i class="fa-solid fa-gifts"></i></div>
+            </div>
+            <h3>Souvenir Tanaman Hias Ramah Lingkungan</h3>
+            <p>Paket kaktus mini, sukulen, atau sirih gading dalam pot terakota mini cantik untuk kado, souvenir pernikahan, aqiqah, dan acara korporasi.</p>
+            <ul class="service-perks">
+              <li><i class="fa-solid fa-check"></i> Custom ucapan & pita kemasan</li>
+              <li><i class="fa-solid fa-check"></i> Harga hemat untuk quantity banyak</li>
+            </ul>
+          </div>
+
+          <div class="service-card">
+            <div class="service-header">
+              <span class="service-number">04</span>
+              <div class="service-icon"><i class="fa-solid fa-building"></i></div>
+            </div>
+            <h3>Rental Tanaman Kantor & Event</h3>
+            <p>Layanan sewa tanaman hias lengkap dengan pemeliharaan rutin mingguan untuk kantor, lobi hotel, kafe, showroom, pameran, maupun pernikahan.</p>
+            <ul class="service-perks">
+              <li><i class="fa-solid fa-check"></i> Rotasi tanaman berkala</li>
+              <li><i class="fa-solid fa-check"></i> Bebas repot perawatan harian</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIPS & PANDUAN PERAWATAN (CARE TIPS) -->
+    <section class="tips-section" id="tips">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-book-open-reader"></i> Panduan Praktis</div>
+          <h2 class="section-title">Tips Merawat Tanaman Hias Tetap Subur</h2>
+          <p class="section-desc">Kiat sederhana dari pembudidaya Bintang Jaya Farm agar tanaman Anda selalu segar, berdaun lebat, dan tidak mudah layu.</p>
+        </div>
+
+        <div class="tips-grid">
+          <div class="tip-card">
+            <div class="tip-badge"><i class="fa-solid fa-droplet"></i> Penyiraman</div>
+            <h3>Aturan Tes Ujung Jari</h3>
+            <p>Jangan menyiram berdasarkan jadwal kaku. Masukkan ujung jari sedalam 2-3 cm ke dalam tanah; jika terasa kering, baru lakukan penyiraman hingga air mengalir keluar dari lubang dasar pot.</p>
+            <div class="tip-tip-alert">
+              <i class="fa-solid fa-circle-exclamation"></i>
+              <span>Hindari genangan air di piring pot agar akar tidak membusuk!</span>
+            </div>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-badge"><i class="fa-solid fa-sun"></i> Sinar Cahaya</div>
+            <h3>Kenali Kebutuhan Daun</h3>
+            <p>Tanaman daun beraneka warna (variegata atau Aglaonema) membutuhkan cahaya terang tak langsung. Jika diletakkan di terik panas langsung, tepi daun dapat terbakar (gosong).</p>
+            <div class="tip-tip-alert">
+              <i class="fa-solid fa-sun"></i>
+              <span>Putar pot seminggu sekali agar pertumbuhan daun seimbang.</span>
+            </div>
+          </div>
+
+          <div class="tip-card">
+            <div class="tip-badge"><i class="fa-solid fa-spray-can-sparkles"></i> Kebersihan</div>
+            <h3>Seka Daun Dari Debu</h3>
+            <p>Debu yang menempel pada daun tanaman indoor menghambat fotosintesis. Usap daun secara lembut menggunakan lap basah hangat atau semprotan embun halus setiap dua minggu sekali.</p>
+            <div class="tip-tip-alert">
+              <i class="fa-solid fa-wand-magic"></i>
+              <span>Membuat daun mengkilap alami dan tampak lebih segar.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS / ULASAN PELANGGAN -->
+    <section class="testimonials-section" id="testimoni">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-heart"></i> Cerita Pelanggan</div>
+          <h2 class="section-title">Apa Kata Mereka Tentang Bintang Jaya Farm?</h2>
+          <p class="section-desc">Kepuasan dan kecintaan pelanggan terhadap tanaman kami adalah kebanggaan terbesar kami sebagai pelaku UMKM.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testi-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testi-quote">
+              "Beli Monstera dan Aglaonema untuk dekorasi ruang tamu baru. Tanaman datang dalam kondisi segar bugar, packing kayu sangat aman sampai Bogor. Pemiliknya juga ramah banget diajari cara merawatnya."
+            </p>
+            <div class="testi-author">
+              <div class="author-avatar"><i class="fa-solid fa-user"></i></div>
+              <div class="author-info">
+                <strong>Rini Wijayanti</strong>
+                <span>Ibu Rumah Tangga & Pecinta Tanaman (Bogor)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testi-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testi-quote">
+              "Kami pesan paket tanaman meja dan standing pot untuk kantor kafe kami. Harganya bersahabat banget untuk kantong UMKM, tanamannya awet segar dan bikin suasana kafe makin sejuk dan instagrammable!"
+            </p>
+            <div class="testi-author">
+              <div class="author-avatar"><i class="fa-solid fa-mug-saucer"></i></div>
+              <div class="author-info">
+                <strong>Dimas Pratama</strong>
+                <span>Owner Kopi Cerita Pagi (Jakarta Selatan)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="testi-rating">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testi-quote">
+              "Paling suka karena Bintang Jaya Farm jujur dengan kondisi tanaman. Diinfokan dulu foto real tanamannya sebelum kirim. Pas nyampe daunnya mulus, pot rapi, dan tanahnya subur. Recommended sekali!"
+            </p>
+            <div class="testi-author">
+              <div class="author-avatar"><i class="fa-solid fa-user-tie"></i></div>
+              <div class="author-info">
+                <strong>Agus Salim</strong>
+                <span>Penggemar Bonsai & Tanaman Hias (Depok)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION (ACCORDION) -->
+    <section class="faq-section" id="faq">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="section-tag"><i class="fa-solid fa-circle-question"></i> Tanya Jawab</div>
+          <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+          <p class="section-desc">Berikut jawaban atas pertanyaan umum seputar pemesanan, pengiriman, dan garansi di Bintang Jaya Farm.</p>
+        </div>
+
+        <div class="faq-accordion-wrap">
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>Apakah Bintang Jaya Farm melayani pengiriman luar kota?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Ya, kami melayani pengiriman ke seluruh wilayah Jabodetabek (menggunakan kurir instan/sameday) serta pengiriman ke luar kota antar provinsi menggunakan ekspedisi khusus tanaman dengan packing pengaman batang & daun agar tanaman tetap aman dan segar.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Bagaimana jika tanaman patah atau rusak saat sampai di tujuan?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Bintang Jaya Farm memberikan <strong>Garansi Penggantian Tanaman</strong> jika terjadi kerusakan fatal selama proses pengiriman. Cukup kirimkan video unboxing paket saat pertama kali dibuka ke nomor WhatsApp kami dalam kurun waktu 1x24 jam sejak paket diterima.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Apakah harga tanaman sudah termasuk pot dan media tanam?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Semua tanaman kami dikirim lengkap dengan media tanam bernutrisi dan polybag/pot standar siap pajang. Kami juga menyediakan opsi upgrade pot keramik, pot terakota estetik, maupun standing planter besi dengan harga terjangkau.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Apakah bisa konsultasi dulu sesuai budget yang saya miliki?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Sangat bisa! Sesuai komitmen kami, Anda dapat menyebutkan berapa budget dan lokasi ruangan yang ingin dihias. Tim kami akan dengan senang hati merekomendasikan pilihan tanaman yang paling pas dan hemat biaya.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Bagaimana cara memesan tanaman dari website ini?</span>
+              <i class="fa-solid fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Sangat mudah! Anda cukup mengklik tombol "Pesan via WA" pada katalog tanaman yang Anda sukai, atau mengisi formulir pemesanan cepat di bagian kontak. Format chat akan terisi otomatis dan tersambung langsung ke WhatsApp customer service kami.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ORDER FORM & KONTAK SECTION -->
+    <section class="contact-section" id="kontak">
+      <div class="container">
+        <div class="contact-grid">
+          
+          <!-- Contact Info Column -->
+          <div class="contact-info-col">
+            <div class="section-tag"><i class="fa-solid fa-location-dot"></i> Hubungi Kami</div>
+            <h2 class="section-title">Mari Hadirkan Keasrian di Rumah Anda Bersama Kami</h2>
+            <p class="section-lead">
+              Kunjungi nursery kami atau hubungi kami langsung secara online. Kami dengan senang hati melayani kebutuhan tanaman hias dan konsultasi Anda.
+            </p>
+
+            <div class="contact-cards">
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                <div>
+                  <h4>Alamat Kebun / Nursery</h4>
+                  <p>Jl. Melati Raya No. 45, Kebun Hijau, Kawasan Florikultura, Jawa Barat, Indonesia</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fa-brands fa-whatsapp"></i></div>
+                <div>
+                  <h4>WhatsApp & Telepon</h4>
+                  <p><a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer">+62 812-3456-7890</a> (Respon Cepat 08.00 - 20.00 WIB)</p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fa-regular fa-envelope"></i></div>
+                <div>
+                  <h4>Email Dukungan</h4>
+                  <p><a href="mailto:kontak@bintangjayafarm.com">kontak@bintangjayafarm.com</a></p>
+                </div>
+              </div>
+
+              <div class="contact-info-item">
+                <div class="contact-icon"><i class="fa-regular fa-clock"></i></div>
+                <div>
+                  <h4>Jam Operasional</h4>
+                  <p>Senin - Minggu: 07.30 - 18.00 WIB (Buka Setiap Hari)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Media Follow -->
+            <div class="social-follow">
+              <span>Ikuti Media Sosial Kami:</span>
+              <div class="social-icons">
+                <a href="#" class="social-btn instagram" title="Instagram Bintang Jaya Farm" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" class="social-btn tiktok" title="TikTok Bintang Jaya Farm" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#" class="social-btn facebook" title="Facebook Bintang Jaya Farm" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="social-btn youtube" title="YouTube Bintang Jaya Farm" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Direct Order & WhatsApp Message Builder Form -->
+          <div class="contact-form-col">
+            <div class="form-container-card">
+              <div class="form-header">
+                <div class="form-icon"><i class="fa-solid fa-paper-plane"></i></div>
+                <div>
+                  <h3>Formulir Pesanan & Konsultasi Cepat</h3>
+                  <p>Isi formulir berikut untuk langsung terhubung ke WhatsApp CS dengan pesan otomatis!</p>
+                </div>
+              </div>
+
+              <form id="orderForm" class="order-form">
+                <div class="form-group">
+                  <label for="userName"><i class="fa-solid fa-user"></i> Nama Lengkap Anda <span class="required">*</span></label>
+                  <input type="text" id="userName" name="name" placeholder="Contoh: Budi Santoso" required>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="userCity"><i class="fa-solid fa-city"></i> Kota / Lokasi Pengiriman <span class="required">*</span></label>
+                    <input type="text" id="userCity" name="city" placeholder="Contoh: Jakarta Selatan" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="userBudget"><i class="fa-solid fa-wallet"></i> Perkiraan Budget</label>
+                    <select id="userBudget" name="budget">
+                      <option value="Menyesuaikan Rekomendasi">Menyesuaikan Rekomendasi</option>
+                      <option value="Di bawah Rp 100.000">&lt; Rp 100.000</option>
+                      <option value="Rp 100.000 - Rp 300.000">Rp 100.000 - Rp 300.000</option>
+                      <option value="Rp 300.000 - Rp 700.000">Rp 300.000 - Rp 700.000</option>
+                      <option value="Di atas Rp 700.000 (Paket Taman/Koleksi)">&gt; Rp 700.000 (Paket / Proyek)</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="plantInterest"><i class="fa-solid fa-leaf"></i> Tanaman atau Layanan yang Diminati</label>
+                  <select id="plantInterest" name="interest">
+                    <option value="Konsultasi Umum Pemilihan Tanaman">-- Pilih Minat atau Konsultasi Umum --</option>
+                    <option value="Monstera Deliciosa King">Monstera Deliciosa King</option>
+                    <option value="Aglaonema Suksom Jaipong">Aglaonema Suksom Jaipong</option>
+                    <option value="Sansevieria Trifasciata (Lidah Mertua)">Sansevieria Trifasciata (Lidah Mertua)</option>
+                    <option value="Philodendron Birkin">Philodendron Birkin</option>
+                    <option value="Calathea Orbifolia">Calathea Orbifolia</option>
+                    <option value="Bonsai Beringin Dolar">Bonsai Beringin Dolar</option>
+                    <option value="Sirih Gading / Epipremnum Aureum">Sirih Gading / Epipremnum Aureum</option>
+                    <option value="Pachira Aquatica (Pohon Uang)">Pachira Aquatica (Pohon Uang)</option>
+                    <option value="Jasa Pembuatan Taman / Lanskap">Jasa Pembuatan Taman / Lanskap</option>
+                    <option value="Paket Souvenir Tanaman Hias">Paket Souvenir Tanaman Hias</option>
+                    <option value="Rental Tanaman Kantor / Acara">Rental Tanaman Kantor / Acara</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="userNotes"><i class="fa-regular fa-message"></i> Catatan Khusus / Kebutuhan Ruangan</label>
+                  <textarea id="userNotes" name="notes" rows="3" placeholder="Contoh: Tolong pilihkan yang tahan dalam ruangan ber-AC untuk ditaruh di sudut ruang tamu..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-whatsapp-submit w-100" id="btnSubmitOrder">
+                  <i class="fa-brands fa-whatsapp"></i> Kirim Pesan via WhatsApp
+                </button>
+                <p class="form-secure-hint"><i class="fa-solid fa-lock"></i> Data Anda aman dan langsung diarahkan ke nomor WhatsApp resmi Bintang Jaya Farm.</p>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          
+          <div class="footer-col col-brand">
+            <div class="footer-logo">
+              <i class="fa-solid fa-seedling"></i>
+              <span class="footer-brand-name">Bintang Jaya Farm</span>
+            </div>
+            <p class="footer-desc">
+              Bintang Jaya Farm menghadirkan aneka tanaman hias berkualitas untuk mempercantik rumah, ruangan, maupun halaman sesuai kebutuhan dan budget Anda. Ciptakan suasana lebih hijau, asri, dan nyaman bersama kami.
+            </p>
+            <div class="footer-badges">
+              <span class="badge-umkm"><i class="fa-solid fa-certificate"></i> UMKM Indonesia</span>
+              <span class="badge-umkm"><i class="fa-solid fa-heart"></i> Florikultura Lestari</span>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Navigasi Cepat</h4>
+            <ul class="footer-links">
+              <li><a href="#beranda"><i class="fa-solid fa-chevron-right"></i> Beranda</a></li>
+              <li><a href="#tentang"><i class="fa-solid fa-chevron-right"></i> Tentang Kami</a></li>
+              <li><a href="#katalog"><i class="fa-solid fa-chevron-right"></i> Katalog Tanaman</a></li>
+              <li><a href="#finder"><i class="fa-solid fa-chevron-right"></i> Rekomendasi Tanaman</a></li>
+              <li><a href="#layanan"><i class="fa-solid fa-chevron-right"></i> Layanan Kami</a></li>
+              <li><a href="#tips"><i class="fa-solid fa-chevron-right"></i> Tips Perawatan</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Kategori Tanaman</h4>
+            <ul class="footer-links">
+              <li><a href="#katalog" class="cat-link" data-cat="indoor"><i class="fa-solid fa-chevron-right"></i> Tanaman Indoor</a></li>
+              <li><a href="#katalog" class="cat-link" data-cat="outdoor"><i class="fa-solid fa-chevron-right"></i> Tanaman Outdoor</a></li>
+              <li><a href="#katalog" class="cat-link" data-cat="air-purifier"><i class="fa-solid fa-chevron-right"></i> Pembersih Udara</a></li>
+              <li><a href="#katalog" class="cat-link" data-cat="low-maintenance"><i class="fa-solid fa-chevron-right"></i> Mudah Dirawat</a></li>
+              <li><a href="#katalog" class="cat-link" data-cat="koleksi"><i class="fa-solid fa-chevron-right"></i> Koleksi Eksotis</a></li>
+              <li><a href="#layanan"><i class="fa-solid fa-chevron-right"></i> Jasa Lanskap & Taman</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4 class="footer-title">Kontak & Lokasi</h4>
+            <ul class="footer-contact-list">
+              <li>
+                <i class="fa-solid fa-map-pin"></i>
+                <span>Jl. Melati Raya No. 45, Kawasan Florikultura, Jawa Barat</span>
+              </li>
+              <li>
+                <i class="fa-brands fa-whatsapp"></i>
+                <span>+62 812-3456-7890</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i>
+                <span>kontak@bintangjayafarm.com</span>
+              </li>
+              <li>
+                <i class="fa-solid fa-truck"></i>
+                <span>Pengiriman Seluruh Indonesia</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-flex">
+        <p class="copyright-text">
+          &copy; <span id="currentYear"></span> <strong>Bintang Jaya Farm</strong>. Seluruh Hak Cipta Dilindungi. Dibuat dengan cinta untuk penghijauan Indonesia.
+        </p>
+        <div class="footer-bottom-links">
+          <a href="#faq">Kebijakan Garansi</a>
+          <a href="#faq">Panduan Pengiriman</a>
+          <a href="#kontak">Hubungi Petani Kami</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- PLANT DETAIL MODAL -->
+  <div class="modal-backdrop" id="plantModal">
+    <div class="modal-dialog">
+      <button class="modal-close" id="modalCloseBtn" aria-label="Tutup Detail Tanaman">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-body" id="modalBodyContent">
+        <!-- Rendered dynamically by script.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING ACTION BUTTONS -->
+  <div class="floating-actions">
+    <button class="scroll-top-btn" id="scrollTopBtn" title="Kembali ke Atas" aria-label="Kembali ke Atas">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <a href="https://wa.me/6281234567890?text=Halo%20Bintang%20Jaya%20Farm,%20saya%20tertarik%20dengan%20koleksi%20tanaman%20hias%20Anda" 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="floating-wa-btn" 
+       title="Chat Customer Service WhatsApp"
+       aria-label="WhatsApp Bintang Jaya Farm">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="wa-tooltip">Konsultasi Tanaman Sekarang!</span>
+    </a>
+  </div>
+
+  <!-- TOAST NOTIFICATION CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- JavaScript App Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
