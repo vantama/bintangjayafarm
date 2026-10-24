@@ -3354,7 +3354,7 @@ section {
    =================================================================== */
 .top-banner-slider {
   width: 100%;
-  padding: 16px 20px 8px;
+  padding: 12px 16px 4px;
   background: transparent;
   position: relative;
   overflow: hidden;
@@ -3362,9 +3362,10 @@ section {
 
 .banner-slider-container {
   max-width: 1240px;
+  width: 100%;
   margin: 0 auto;
   position: relative;
-  border-radius: clamp(16px, 2vw, 24px);
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 10px 30px -5px rgba(10, 38, 28, 0.12), 0 0 0 1px rgba(23, 94, 70, 0.08);
   background: #fbfbf8;
@@ -3373,12 +3374,13 @@ section {
 .banner-slider-track {
   display: flex;
   width: 100%;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
   will-change: transform;
 }
 
 .banner-slide {
   min-width: 100%;
+  width: 100%;
   flex-shrink: 0;
   position: relative;
   user-select: none;
@@ -3388,9 +3390,7 @@ section {
 .banner-img-wrap {
   position: relative;
   width: 100%;
-  aspect-ratio: 2.7 / 1;
-  min-height: 190px;
-  max-height: 460px;
+  aspect-ratio: 1280 / 475;
   background-color: #f7f9f6;
   overflow: hidden;
   display: flex;
@@ -3415,7 +3415,7 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: clamp(20px, 5vw, 60px);
+  padding: clamp(14px, 4vw, 50px);
   color: #ffffff;
   pointer-events: none;
 }
@@ -3426,31 +3426,31 @@ section {
   gap: 6px;
   background: var(--accent-sprout);
   color: #ffffff;
-  padding: 4px 12px;
+  padding: 3px 10px;
   border-radius: 20px;
-  font-size: clamp(0.7rem, 1.2vw, 0.82rem);
+  font-size: clamp(0.65rem, 1.1vw, 0.8rem);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
   width: fit-content;
 }
 
 .banner-slide-overlay h2 {
   font-family: 'Plus Jakarta Sans', sans-serif;
-  font-size: clamp(1.2rem, 3.2vw, 2.2rem);
+  font-size: clamp(0.95rem, 2.5vw, 1.9rem);
   font-weight: 800;
   color: #ffffff;
-  margin: 0 0 8px 0;
+  margin: 0 0 6px 0;
   line-height: 1.2;
 }
 
 .banner-slide-overlay p {
-  font-size: clamp(0.85rem, 1.5vw, 1.05rem);
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 580px;
+  font-size: clamp(0.72rem, 1.3vw, 0.95rem);
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 520px;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 /* Slider Arrow Navigation */
@@ -3458,15 +3458,15 @@ section {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: clamp(36px, 4vw, 44px);
-  height: clamp(36px, 4vw, 44px);
+  width: clamp(32px, 3.8vw, 42px);
+  height: clamp(32px, 3.8vw, 42px);
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.88);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(23, 94, 70, 0.15);
   color: var(--primary-dark);
-  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  font-size: clamp(0.8rem, 1.3vw, 1rem);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3480,27 +3480,27 @@ section {
   background: var(--primary-main);
   color: #ffffff;
   border-color: var(--primary-main);
-  transform: translateY(-50%) scale(1.1);
+  transform: translateY(-50%) scale(1.08);
 }
 
 .banner-slider-arrow.prev {
-  left: clamp(10px, 2vw, 20px);
+  left: clamp(8px, 1.5vw, 16px);
 }
 
 .banner-slider-arrow.next {
-  right: clamp(10px, 2vw, 20px);
+  right: clamp(8px, 1.5vw, 16px);
 }
 
 /* Dots */
 .banner-slider-dots {
   position: absolute;
-  bottom: clamp(10px, 1.8vw, 18px);
+  bottom: clamp(6px, 1.4vw, 12px);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  gap: 8px;
+  gap: 6px;
   z-index: 10;
-  padding: 4px 10px;
+  padding: 3px 8px;
   background: rgba(10, 38, 28, 0.35);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -3508,8 +3508,8 @@ section {
 }
 
 .banner-dot {
-  width: 9px;
-  height: 9px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.55);
   border: none;
@@ -3519,30 +3519,38 @@ section {
 }
 
 .banner-dot.active {
-  width: 24px;
-  border-radius: 12px;
+  width: 20px;
+  border-radius: 10px;
   background: #ffffff;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.8);
 }
 
-/* Media Queries for responsive banner */
+/* Responsive adjustments across breakpoints */
 @media (max-width: 768px) {
   .top-banner-slider {
-    padding: 10px 12px 6px;
+    padding: 8px 10px 4px;
   }
-  .banner-img-wrap {
-    aspect-ratio: 2.2 / 1;
-    min-height: 160px;
+  .banner-slider-container {
+    border-radius: 12px;
   }
   .banner-slider-arrow {
-    display: none; /* Keep clean on touch screens, swipe gesture takes over */
+    display: none; /* Swipe handles navigation smoothly on touch screens */
   }
 }
 
 @media (max-width: 480px) {
-  .banner-img-wrap {
-    aspect-ratio: 1.9 / 1;
-    min-height: 140px;
+  .top-banner-slider {
+    padding: 6px 6px 2px;
+  }
+  .banner-slider-container {
+    border-radius: 8px;
+  }
+  .banner-slide-overlay {
+    padding: 8px 12px;
+  }
+  .banner-slide-overlay p {
+    display: none; /* Hide dense paragraph on small phone screens */
   }
 }
+
 
