@@ -21,7 +21,10 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <!-- Stylesheet -->
+  <!-- Stylesheet & Favicon -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/jpeg" href="../assets/images/logo-bintang-jaya.jpeg">
+  <link rel="apple-touch-icon" href="../assets/images/logo-bintang-jaya.jpeg">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="artikel.css">
 </head>
@@ -31,15 +34,85 @@
   <header class="art-nav">
     <div class="art-nav-inner">
       <a href="../index.html" class="art-brand" title="Beranda Bintang Jaya Farm">
-        <i class="fa-solid fa-seedling"></i>
+        <img src="../assets/images/logo-bintang-jaya.jpeg" alt="Logo Bintang Jaya Farm" class="art-brand-img">
         <span>Bintang Jaya Farm</span>
       </a>
-      <a href="../index.html" class="art-back">
-        <i class="fa-solid fa-house"></i>
-        <span>Kembali ke Beranda</span>
-      </a>
+      <div class="art-nav-actions">
+        <div class="art-nav-social">
+          <a href="https://www.instagram.com/bintangjaya.farm?rpxt=YjRvMGNrdjVwbDYx&utm_source=qr" target="_blank" rel="noopener noreferrer" class="art-social-icon instagram" title="Instagram Bintang Jaya Farm" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/lia.sarita.14?sfnsn=wiwspwa&mibextid=RUbZ1f" target="_blank" rel="noopener noreferrer" class="art-social-icon facebook" title="Facebook Bintang Jaya Farm" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+        <a href="../index.html" class="art-back">
+          <i class="fa-solid fa-house"></i>
+          <span>Kembali ke Beranda</span>
+        </a>
+      </div>
     </div>
   </header>
+
+  <!-- Top Responsive Banner Slider (Non-direct link / Display Only) -->
+  <section class="top-banner-slider" aria-label="Banner Resmi Bintang Jaya Farm">
+    <div class="banner-slider-container">
+      <div class="banner-slider-track" id="bannerTrack">
+        <!-- Slide 1: Official Banner Image -->
+        <div class="banner-slide">
+          <div class="banner-img-wrap">
+            <img src="../assets/images/banner-bintang-jaya.jpeg" 
+                 alt="Bintang Jaya Farm - Tanaman Hias, Kehidupan Lebih Indah" 
+                 class="banner-slide-img" 
+                 loading="eager">
+          </div>
+        </div>
+        <!-- Slide 2: Bougenville Showcase -->
+        <div class="banner-slide">
+          <div class="banner-img-wrap">
+            <img src="../assets/images/bougenville-hero.jpg" 
+                 alt="Koleksi Ragam Bougenville Bintang Jaya Farm" 
+                 class="banner-slide-img" 
+                 loading="lazy">
+            <div class="banner-slide-overlay">
+              <span class="banner-slide-badge"><i class="fa-solid fa-palette"></i> Ragam Bougenville</span>
+              <h2>Pesona Bunga Bougenville Unggulan</h2>
+              <p>Ragam varian warna cerah berkualitas dari pembibitan terpercaya.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Slide 3: Tanaman Hias & Asri -->
+        <div class="banner-slide">
+          <div class="banner-img-wrap">
+            <img src="../assets/images/koleksi-tanaman-hias.jpg" 
+                 alt="Koleksi Tanaman Hias Asri Bintang Jaya Farm" 
+                 class="banner-slide-img" 
+                 loading="lazy">
+            <div class="banner-slide-overlay">
+              <span class="banner-slide-badge"><i class="fa-solid fa-leaf"></i> Koleksi Asri</span>
+              <h2>Hijaukan Setiap Sudut Rumah & Halaman Anda</h2>
+              <p>Solusi tanaman indoor dan outdoor langsung dari nursery petani lokal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="banner-slider-arrow prev" id="bannerPrevBtn" aria-label="Slide Sebelumnya" type="button">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="banner-slider-arrow next" id="bannerNextBtn" aria-label="Slide Berikutnya" type="button">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Dots Indicators -->
+      <div class="banner-slider-dots" id="bannerDots">
+        <button class="banner-dot active" data-slide="0" aria-label="Slide 1" type="button"></button>
+        <button class="banner-dot" data-slide="1" aria-label="Slide 2" type="button"></button>
+        <button class="banner-dot" data-slide="2" aria-label="Slide 3" type="button"></button>
+      </div>
+    </div>
+  </section>
 
   <!-- Hero Header Blog -->
   <section class="hub-hero">
@@ -139,11 +212,26 @@
 
   <!-- Footer -->
   <footer class="art-footer">
-    <p>&copy; 2026 <strong>Bintang Jaya Farm</strong>. Solusi Tanaman Hias UMKM Berkualitas & Terpercaya di Indonesia.</p>
+    <div class="art-footer-inner">
+      <div class="art-footer-brand">
+        <img src="../assets/images/logo-bintang-jaya.jpeg" alt="Logo Bintang Jaya Farm" class="footer-logo-img">
+        <span>Bintang Jaya Farm</span>
+      </div>
+      <p>&copy; 2026 <strong>Bintang Jaya Farm</strong>. Solusi Tanaman Hias UMKM Berkualitas & Terpercaya di Indonesia.</p>
+      <div class="art-footer-social">
+        <a href="https://www.instagram.com/bintangjaya.farm?rpxt=YjRvMGNrdjVwbDYx&utm_source=qr" target="_blank" rel="noopener noreferrer" class="art-social-icon instagram" title="Ikuti Instagram Bintang Jaya Farm" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/lia.sarita.14?sfnsn=wiwspwa&mibextid=RUbZ1f" target="_blank" rel="noopener noreferrer" class="art-social-icon facebook" title="Ikuti Facebook Bintang Jaya Farm" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
   </footer>
 
-  <!-- Filter Kategori Ringan & Interaktif -->
+  <!-- Scripts: Filter & Banner Slider Logic -->
   <script>
+    // 1. Article Filter Functionality
     const filterBtns = document.querySelectorAll('.hub-cat-btn');
     const cards = document.querySelectorAll('.hub-card');
 
@@ -162,6 +250,95 @@
         });
       });
     });
+
+    // 2. Responsive Banner Slider
+    (function initBannerSlider() {
+      const track = document.getElementById('bannerTrack');
+      const slides = document.querySelectorAll('.banner-slide');
+      const prevBtn = document.getElementById('bannerPrevBtn');
+      const nextBtn = document.getElementById('bannerNextBtn');
+      const dots = document.querySelectorAll('.banner-dot');
+      
+      if (!track || slides.length === 0) return;
+
+      let currentIndex = 0;
+      let slideInterval = null;
+      const totalSlides = slides.length;
+
+      function updateSlider() {
+        track.style.transform = `translateX(-${currentIndex * 100}%)`;
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('active', idx === currentIndex);
+        });
+      }
+
+      function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlider();
+      }
+
+      function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      function startAutoSlide() {
+        stopAutoSlide();
+        slideInterval = setInterval(nextSlide, 5000);
+      }
+
+      function stopAutoSlide() {
+        if (slideInterval) clearInterval(slideInterval);
+      }
+
+      if (nextBtn) nextBtn.addEventListener('click', () => {
+        nextSlide();
+        startAutoSlide();
+      });
+
+      if (prevBtn) prevBtn.addEventListener('click', () => {
+        prevSlide();
+        startAutoSlide();
+      });
+
+      dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+          const slideIdx = parseInt(dot.getAttribute('data-slide'), 10);
+          if (!isNaN(slideIdx)) {
+            currentIndex = slideIdx;
+            updateSlider();
+            startAutoSlide();
+          }
+        });
+      });
+
+      // Pause on hover
+      const container = track.closest('.banner-slider-container');
+      if (container) {
+        container.addEventListener('mouseenter', stopAutoSlide);
+        container.addEventListener('mouseleave', startAutoSlide);
+
+        // Mobile touch swipe support
+        let startX = 0;
+        let endX = 0;
+        container.addEventListener('touchstart', (e) => {
+          stopAutoSlide();
+          startX = e.touches[0].clientX;
+        }, { passive: true });
+
+        container.addEventListener('touchend', (e) => {
+          endX = e.changedTouches[0].clientX;
+          const diff = startX - endX;
+          if (Math.abs(diff) > 40) {
+            if (diff > 0) nextSlide();
+            else prevSlide();
+          }
+          startAutoSlide();
+        }, { passive: true });
+      }
+
+      startAutoSlide();
+    })();
   </script>
 
 </body>

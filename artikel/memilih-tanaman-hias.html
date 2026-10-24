@@ -22,7 +22,10 @@
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <!-- Core & Article Stylesheet -->
+  <!-- Stylesheet & Favicon -->
+  <link rel="icon" type="image/x-icon" href="../favicon.ico">
+  <link rel="icon" type="image/jpeg" href="../assets/images/logo-bintang-jaya.jpeg">
+  <link rel="apple-touch-icon" href="../assets/images/logo-bintang-jaya.jpeg">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="artikel.css">
 </head>
@@ -35,18 +38,28 @@
   <header class="art-nav">
     <div class="art-nav-inner">
       <a href="../index.html" class="art-brand" title="Beranda Bintang Jaya Farm">
-        <i class="fa-solid fa-seedling"></i>
+        <img src="../assets/images/logo-bintang-jaya.jpeg" alt="Logo Bintang Jaya Farm" class="art-brand-img">
         <span>Bintang Jaya Farm</span>
       </a>
-      <div style="display: flex; align-items: center; gap: 8px;">
-        <a href="index.html" class="art-back">
-          <i class="fa-solid fa-newspaper"></i>
-          <span>Semua Artikel</span>
-        </a>
-        <a href="../index.html" class="art-back" style="background: transparent;">
-          <i class="fa-solid fa-house"></i>
-          <span>Beranda</span>
-        </a>
+      <div class="art-nav-actions">
+        <div class="art-nav-social">
+          <a href="https://www.instagram.com/bintangjaya.farm?rpxt=YjRvMGNrdjVwbDYx&utm_source=qr" target="_blank" rel="noopener noreferrer" class="art-social-icon instagram" title="Instagram Bintang Jaya Farm" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://www.facebook.com/lia.sarita.14?sfnsn=wiwspwa&mibextid=RUbZ1f" target="_blank" rel="noopener noreferrer" class="art-social-icon facebook" title="Facebook Bintang Jaya Farm" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <a href="index.html" class="art-back">
+            <i class="fa-solid fa-newspaper"></i>
+            <span>Semua Artikel</span>
+          </a>
+          <a href="../index.html" class="art-back" style="background: transparent;">
+            <i class="fa-solid fa-house"></i>
+            <span>Beranda</span>
+          </a>
+        </div>
       </div>
     </div>
   </header>
@@ -135,6 +148,18 @@
       <p>
         Selain Bougenville, Bintang Jaya Farm terus mengurasi tanaman-tanaman populer seperti Monstera, Aglaonema, Sansevieria, Calathea, hingga tanaman gantung sirih hias. Dengan ketersediaan opsi yang melimpah, calon pembeli bebas menentukan pilihan yang selaras dengan tema interior maupun anggaran yang telah disiapkan.
       </p>
+
+      <!-- Figure: Koleksi Favorit Aglaonema Suksom & Sirih Gading -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 24px 0;">
+        <figure class="art-figure" style="margin: 0;">
+          <img src="../assets/images/aglaonema-suksom-jaipong.jpg" alt="Aglaonema Suksom Jaipong Bintang Jaya Farm" loading="lazy">
+          <figcaption><i class="fa-solid fa-camera"></i> Aglaonema Suksom Jaipong berdaun merah merona mewah.</figcaption>
+        </figure>
+        <figure class="art-figure" style="margin: 0;">
+          <img src="../assets/images/sirih-gading-pothos.jpg" alt="Sirih Gading Golden Pothos Bintang Jaya Farm" loading="lazy">
+          <figcaption><i class="fa-solid fa-camera"></i> Sirih Gading (Golden Pothos) tanaman hias gantung asri.</figcaption>
+        </figure>
+      </div>
 
       <!-- Section 4 -->
       <h2>Kapan Waktu yang Tepat untuk Mulai Memiliki Tanaman Hias?</h2>
@@ -232,7 +257,21 @@
 
   <!-- Footer -->
   <footer class="art-footer">
-    <p>&copy; 2026 <strong>Bintang Jaya Farm</strong>. Solusi Tanaman Hias UMKM Berkualitas & Terpercaya di Indonesia.</p>
+    <div class="art-footer-inner">
+      <div class="art-footer-brand">
+        <img src="../assets/images/logo-bintang-jaya.jpeg" alt="Logo Bintang Jaya Farm" class="footer-logo-img">
+        <span>Bintang Jaya Farm</span>
+      </div>
+      <p>&copy; 2026 <strong>Bintang Jaya Farm</strong>. Solusi Tanaman Hias UMKM Berkualitas & Terpercaya di Indonesia.</p>
+      <div class="art-footer-social">
+        <a href="https://www.instagram.com/bintangjaya.farm?rpxt=YjRvMGNrdjVwbDYx&utm_source=qr" target="_blank" rel="noopener noreferrer" class="art-social-icon instagram" title="Ikuti Instagram Bintang Jaya Farm" aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.facebook.com/lia.sarita.14?sfnsn=wiwspwa&mibextid=RUbZ1f" target="_blank" rel="noopener noreferrer" class="art-social-icon facebook" title="Ikuti Facebook Bintang Jaya Farm" aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+      </div>
+    </div>
   </footer>
 
   <!-- Script for Reading Progress Bar -->

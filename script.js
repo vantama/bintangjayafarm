@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       price: 135000,
       badge: "Warna Mewah",
       badgeClass: "badge-rare",
-      image: "https://images.unsplash.com/photo-1599685315640-9ceab2f58944?auto=format&fit=crop&w=700&q=80",
+      image: "assets/images/aglaonema-suksom-jaipong.jpg",
       sunlight: "Cahaya Sedang",
       water: "2 Hari Sekali",
       difficulty: "Sedang",
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       price: 35000,
       badge: "Ramah Pemula",
       badgeClass: "badge-pemula",
-      image: "https://images.unsplash.com/photo-1596724803693-e4d0d17d5913?auto=format&fit=crop&w=700&q=80",
+      image: "assets/images/sirih-gading-pothos.jpg",
       sunlight: "Bebas / Fleksibel",
       water: "2-3 Hari Sekali",
       difficulty: "Sangat Mudah",
@@ -462,7 +462,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Sirih Gading (Golden Pothos)',
       price: 'Rp 35.000',
       reason: 'Bentuk juntaian daun segar yang menenangkan pandangan saat bekerja di depan layar komputer.',
-      image: 'https://images.unsplash.com/photo-1596724803693-e4d0d17d5913?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/sirih-gading-pothos.jpg',
       badge: 'Penyegar Meja Kerja'
     },
     {
@@ -482,7 +482,7 @@ document.addEventListener('DOMContentLoaded', () => {
       name: 'Aglaonema Suksom Jaipong',
       price: 'Rp 135.000',
       reason: 'Daun merah merona yang eksotis, cocok untuk Anda yang menikmati seni merawat daun hias bernilai tinggi.',
-      image: 'https://images.unsplash.com/photo-1599685315640-9ceab2f58944?auto=format&fit=crop&w=600&q=80',
+      image: 'assets/images/aglaonema-suksom-jaipong.jpg',
       badge: 'Koleksi Estetik'
     },
     {
@@ -680,6 +680,95 @@ Halo tim Bintang Jaya Farm, mohon informasi ketersediaan, foto real tanaman, dan
       setTimeout(() => toast.remove(), 300);
     }, 3200);
   }
+
+  // ----------------- 12. RESPONSIVE TOP BANNER SLIDER -----------------
+  (function initBannerSlider() {
+    const track = document.getElementById('bannerTrack');
+    const slides = document.querySelectorAll('.banner-slide');
+    const prevBtn = document.getElementById('bannerPrevBtn');
+    const nextBtn = document.getElementById('bannerNextBtn');
+    const dots = document.querySelectorAll('.banner-dot');
+
+    if (!track || slides.length === 0) return;
+
+    let currentIndex = 0;
+    let slideInterval = null;
+    const totalSlides = slides.length;
+
+    function updateSlider() {
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+      });
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlider();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlider();
+    }
+
+    function startAutoSlide() {
+      stopAutoSlide();
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function stopAutoSlide() {
+      if (slideInterval) clearInterval(slideInterval);
+    }
+
+    if (nextBtn) nextBtn.addEventListener('click', () => {
+      nextSlide();
+      startAutoSlide();
+    });
+
+    if (prevBtn) prevBtn.addEventListener('click', () => {
+      prevSlide();
+      startAutoSlide();
+    });
+
+    dots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const slideIdx = parseInt(dot.getAttribute('data-slide'), 10);
+        if (!isNaN(slideIdx)) {
+          currentIndex = slideIdx;
+          updateSlider();
+          startAutoSlide();
+        }
+      });
+    });
+
+    // Pause on hover
+    const container = track.closest('.banner-slider-container');
+    if (container) {
+      container.addEventListener('mouseenter', stopAutoSlide);
+      container.addEventListener('mouseleave', startAutoSlide);
+
+      // Mobile touch swipe gesture
+      let startX = 0;
+      let endX = 0;
+      container.addEventListener('touchstart', (e) => {
+        stopAutoSlide();
+        startX = e.touches[0].clientX;
+      }, { passive: true });
+
+      container.addEventListener('touchend', (e) => {
+        endX = e.changedTouches[0].clientX;
+        const diff = startX - endX;
+        if (Math.abs(diff) > 40) {
+          if (diff > 0) nextSlide();
+          else prevSlide();
+        }
+        startAutoSlide();
+      }, { passive: true });
+    }
+
+    startAutoSlide();
+  })();
 
   // Initialize catalog
   filterAndDisplayPlants();
