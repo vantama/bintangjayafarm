@@ -3,155 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pusat Artikel & Panduan Tanaman Hias | Bintang Jaya Farm</title>
-  <meta name="description" content="Kumpulan artikel edukatif, panduan perawatan tanaman indoor dan outdoor, serta tips memilih tanaman hias berkualitas dari Bintang Jaya Farm.">
+  <title>Pusat Artikel & Panduan Florikultura | Bintang Jaya Farm</title>
+  <meta name="description" content="Koleksi artikel edukatif, panduan praktis perawatan tanaman hias indoor dan outdoor, serta tips memilih tanaman hias berkualitas dari Bintang Jaya Farm.">
   <meta name="keywords" content="Artikel Tanaman Hias, Blog Bintang Jaya Farm, Tips Merawat Tanaman, Ragam Bougenville, Panduan Berkebun">
   
-  <!-- Open Graph -->
+  <!-- Open Graph / Meta Sosial -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Pusat Artikel & Panduan Tanaman Hias | Bintang Jaya Farm">
-  <meta property="og:description" content="Baca kumpulan panduan praktis dan wawasan mendalam seputar florikultura, ragam Bougenville, dan tata ruang tanaman asri.">
+  <meta property="og:title" content="Pusat Artikel & Panduan Florikultura | Bintang Jaya Farm">
+  <meta property="og:description" content="Kumpulan panduan praktis dan wawasan mendalam seputar florikultura, ragam Bougenville, dan tata ruang tanaman asri.">
   <meta property="og:image" content="../assets/images/memilih-tanaman-hero.jpg">
   
-  <!-- Google Fonts -->
+  <!-- Standar Font Blog Modern (Inter + Plus Jakarta Sans) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
   
-  <!-- Font Awesome -->
+  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <!-- Core & Custom Styles -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="artikel.css">
-  <style>
-    .hub-hero {
-      background: linear-gradient(135deg, rgba(10,38,28,0.92), rgba(23,94,70,0.88)), url('../assets/images/memilih-tanaman-hero.jpg') center/cover;
-      color: #fff;
-      padding: 70px 20px 50px;
-      text-align: center;
-    }
-    .hub-hero-inner {
-      max-width: 820px;
-      margin: 0 auto;
-    }
-    .hub-hero h1 {
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      margin-bottom: 14px;
-      color: #fff;
-    }
-    .hub-hero p {
-      font-size: 1.1rem;
-      color: rgba(255,255,255,0.9);
-      line-height: 1.6;
-    }
-    .hub-container {
-      max-width: 1100px;
-      margin: 40px auto 70px;
-      padding: 0 20px;
-    }
-    .hub-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 30px;
-    }
-    .hub-card {
-      background: var(--bg-surface);
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-      transition: var(--trans-smooth);
-      display: flex;
-      flex-direction: column;
-      border: 1px solid var(--border-subtle);
-      text-decoration: none;
-      color: inherit;
-    }
-    .hub-card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-lg);
-      border-color: var(--primary-main);
-    }
-    .hub-card-thumb {
-      position: relative;
-      width: 100%;
-      height: 220px;
-      overflow: hidden;
-    }
-    .hub-card-thumb img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform var(--trans-smooth);
-    }
-    .hub-card:hover .hub-card-thumb img {
-      transform: scale(1.05);
-    }
-    .hub-card-badge {
-      position: absolute;
-      top: 14px;
-      left: 14px;
-      background: rgba(10,38,28,0.85);
-      backdrop-filter: blur(8px);
-      color: #a7f3d0;
-      padding: 5px 12px;
-      border-radius: var(--radius-pill);
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-    .hub-card-body {
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      flex-grow: 1;
-    }
-    .hub-card-meta {
-      display: flex;
-      gap: 14px;
-      font-size: 0.82rem;
-      color: var(--text-muted);
-      margin-bottom: 10px;
-    }
-    .hub-card-meta i {
-      color: var(--accent-sprout);
-    }
-    .hub-card-title {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--primary-deep);
-      line-height: 1.35;
-      margin-bottom: 12px;
-    }
-    .hub-card-excerpt {
-      font-size: 0.92rem;
-      color: var(--text-body);
-      line-height: 1.6;
-      margin-bottom: 20px;
-      flex-grow: 1;
-    }
-    .hub-card-footer {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding-top: 14px;
-      border-top: 1px solid var(--border-subtle);
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--primary-main);
-    }
-    .hub-card-footer i {
-      transition: transform var(--trans-fast);
-    }
-    .hub-card:hover .hub-card-footer i {
-      transform: translateX(4px);
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Header Navigation -->
+  <!-- Header Navigasi -->
   <header class="art-nav">
     <div class="art-nav-inner">
       <a href="../index.html" class="art-brand" title="Beranda Bintang Jaya Farm">
@@ -165,84 +41,98 @@
     </div>
   </header>
 
-  <!-- Hero Header -->
+  <!-- Hero Header Blog -->
   <section class="hub-hero">
     <div class="hub-hero-inner">
       <span class="art-tag"><i class="fa-solid fa-book-open"></i> Ruang Edukasi & Inspirasi</span>
       <h1>Pusat Artikel & Panduan Florikultura</h1>
-      <p>Jelajahi panduan praktis, tips pemilihan tanaman hias, dan rahasia merawat tanaman dari para pembudidaya berpengalaman di Bintang Jaya Farm.</p>
+      <p>Jelajahi panduan praktis, tips pemilihan tanaman hias, dan rahasia merawat tanaman dari para pembudidaya berpengalaman di nursery Bintang Jaya Farm.</p>
     </div>
   </section>
 
-  <!-- Article Grid Container -->
-  <main class="hub-container">
+  <!-- Filter Kategori Artikel Cepat -->
+  <nav class="hub-categories" aria-label="Kategori Artikel">
+    <button class="hub-cat-btn active" data-filter="all"><i class="fa-solid fa-border-all"></i> Semua Artikel</button>
+    <button class="hub-cat-btn" data-filter="ragam"><i class="fa-solid fa-palette"></i> Ragam Bougenville</button>
+    <button class="hub-cat-btn" data-filter="tips"><i class="fa-solid fa-compass-drafting"></i> Tips & Pemilihan</button>
+    <button class="hub-cat-btn" data-filter="perawatan"><i class="fa-solid fa-hand-holding-droplet"></i> Budidaya & Perawatan</button>
+  </nav>
+
+  <!-- Kontainer Grid Artikel Responsif -->
+  <main class="hub-container" id="articleList">
     <div class="hub-grid">
 
-      <!-- Article 1 -->
-      <a href="mengenal-ragam-bougenville.html" class="hub-card">
-        <div class="hub-card-thumb">
-          <img src="../assets/images/bougenville-hero.jpg" alt="Ragam Bougenville dan Perawatannya" loading="lazy">
-          <span class="hub-card-badge"><i class="fa-solid fa-palette"></i> Karakteristik</span>
-        </div>
-        <div class="hub-card-body">
-          <div class="hub-card-meta">
-            <span><i class="fa-solid fa-user-pen"></i> Fitto Desvana AR</span>
-            <span><i class="fa-solid fa-clock"></i> 4 Menit</span>
+      <!-- Artikel 1: Bougenville -->
+      <article class="hub-card" data-category="ragam">
+        <a href="mengenal-ragam-bougenville.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+          <div class="hub-card-thumb">
+            <img src="../assets/images/bougenville-hero.jpg" alt="Mengenal Ragam Bougenville dan Perawatannya" loading="lazy">
+            <span class="hub-card-badge"><i class="fa-solid fa-palette"></i> Karakteristik</span>
           </div>
-          <h2 class="hub-card-title">Mengenal Ragam Bougenville dan Perawatannya</h2>
-          <p class="hub-card-excerpt">
-            Pelajari ragam warna mempesona bunga Bougenville, fleksibilitas penanaman di pot maupun pekarangan, serta panduan praktis perawatannya agar berbunga lebat sepanjang musim.
-          </p>
-          <div class="hub-card-footer">
-            <span>Baca Artikel Lengkap</span>
-            <i class="fa-solid fa-arrow-right"></i>
+          <div class="hub-card-body">
+            <div class="hub-card-meta">
+              <span><i class="fa-solid fa-user-pen"></i> Fitto Desvana AR</span>
+              <span><i class="fa-solid fa-clock"></i> 4 Menit Baca</span>
+            </div>
+            <h2 class="hub-card-title">Mengenal Ragam Bougenville dan Perawatannya</h2>
+            <p class="hub-card-excerpt">
+              Pelajari ragam warna mempesona bunga Bougenville, fleksibilitas penanaman di pot maupun pekarangan, serta panduan praktis perawatannya agar berbunga lebat sepanjang musim.
+            </p>
+            <div class="hub-card-footer">
+              <span>Baca Selengkapnya</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </article>
 
-      <!-- Article 2 -->
-      <a href="memilih-tanaman-hias.html" class="hub-card">
-        <div class="hub-card-thumb">
-          <img src="../assets/images/memilih-tanaman-hero.jpg" alt="Memilih Tanaman Hias yang Tepat" loading="lazy">
-          <span class="hub-card-badge"><i class="fa-solid fa-compass-drafting"></i> Rekomendasi</span>
-        </div>
-        <div class="hub-card-body">
-          <div class="hub-card-meta">
-            <span><i class="fa-solid fa-user-pen"></i> Chalista Anggun Zk</span>
-            <span><i class="fa-solid fa-clock"></i> 5 Menit</span>
+      <!-- Artikel 2: Memilih Tanaman Hias -->
+      <article class="hub-card" data-category="tips">
+        <a href="memilih-tanaman-hias.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+          <div class="hub-card-thumb">
+            <img src="../assets/images/memilih-tanaman-hero.jpg" alt="Memilih Tanaman Hias yang Tepat untuk Mempercantik Rumah" loading="lazy">
+            <span class="hub-card-badge"><i class="fa-solid fa-compass-drafting"></i> Rekomendasi</span>
           </div>
-          <h2 class="hub-card-title">Memilih Tanaman Hias yang Tepat untuk Mempercantik Rumah</h2>
-          <p class="hub-card-excerpt">
-            Panduan 5 langkah menentukan tanaman hias yang sesuai dengan kebutuhan ruang, intensitas pencahayaan, ukuran proporsional, serta waktu perawatan Anda sehari-hari.
-          </p>
-          <div class="hub-card-footer">
-            <span>Baca Artikel Lengkap</span>
-            <i class="fa-solid fa-arrow-right"></i>
+          <div class="hub-card-body">
+            <div class="hub-card-meta">
+              <span><i class="fa-solid fa-user-pen"></i> Chalista Anggun Zk</span>
+              <span><i class="fa-solid fa-clock"></i> 5 Menit Baca</span>
+            </div>
+            <h2 class="hub-card-title">Memilih Tanaman Hias yang Tepat untuk Mempercantik Rumah</h2>
+            <p class="hub-card-excerpt">
+              Panduan 5 langkah menentukan tanaman hias yang sesuai dengan kebutuhan ruang, intensitas pencahayaan, ukuran proporsional, serta ketersediaan waktu perawatan harian Anda.
+            </p>
+            <div class="hub-card-footer">
+              <span>Baca Selengkapnya</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </article>
 
-      <!-- Article 3 -->
-      <a href="panduan-perawatan-tanaman.html" class="hub-card">
-        <div class="hub-card-thumb">
-          <img src="../assets/images/perawatan-hero.jpg" alt="Panduan Perawatan Tanaman Indoor & Outdoor" loading="lazy">
-          <span class="hub-card-badge"><i class="fa-solid fa-hand-holding-droplet"></i> Budidaya</span>
-        </div>
-        <div class="hub-card-body">
-          <div class="hub-card-meta">
-            <span><i class="fa-solid fa-certificate"></i> Tim Bintang Jaya Farm</span>
-            <span><i class="fa-solid fa-clock"></i> 7 Menit</span>
+      <!-- Artikel 3: Panduan Perawatan -->
+      <article class="hub-card" data-category="perawatan">
+        <a href="panduan-perawatan-tanaman.html" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+          <div class="hub-card-thumb">
+            <img src="../assets/images/perawatan-hero.jpg" alt="Panduan Komprehensif Perawatan Tanaman Indoor & Outdoor" loading="lazy">
+            <span class="hub-card-badge"><i class="fa-solid fa-hand-holding-droplet"></i> Budidaya</span>
           </div>
-          <h2 class="hub-card-title">Panduan Komprehensif Perawatan Tanaman Indoor & Outdoor</h2>
-          <p class="hub-card-excerpt">
-            Ulasan mendalam seputar teknik penyiraman dengan tes ujung jari, formula media tanam, pemupukan organik, dilengkapi tabel perbandingan komparatif indoor vs. outdoor.
-          </p>
-          <div class="hub-card-footer">
-            <span>Baca Artikel Lengkap</span>
-            <i class="fa-solid fa-arrow-right"></i>
+          <div class="hub-card-body">
+            <div class="hub-card-meta">
+              <span><i class="fa-solid fa-certificate"></i> Tim Bintang Jaya Farm</span>
+              <span><i class="fa-solid fa-clock"></i> 7 Menit Baca</span>
+            </div>
+            <h2 class="hub-card-title">Panduan Komprehensif Perawatan Tanaman Indoor & Outdoor</h2>
+            <p class="hub-card-excerpt">
+              Ulasan mendalam teknik penyiraman tes ujung jari, formula media tanam porous, pemupukan organik, serta tabel komparasi interaktif karakteristik tanaman indoor vs. outdoor.
+            </p>
+            <div class="hub-card-footer">
+              <span>Baca Selengkapnya</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </article>
 
     </div>
   </main>
@@ -251,6 +141,28 @@
   <footer class="art-footer">
     <p>&copy; 2026 <strong>Bintang Jaya Farm</strong>. Solusi Tanaman Hias UMKM Berkualitas & Terpercaya di Indonesia.</p>
   </footer>
+
+  <!-- Filter Kategori Ringan & Interaktif -->
+  <script>
+    const filterBtns = document.querySelectorAll('.hub-cat-btn');
+    const cards = document.querySelectorAll('.hub-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.getAttribute('data-filter');
+        cards.forEach(card => {
+          if (filter === 'all' || card.getAttribute('data-category') === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
 
 </body>
 </html>
