@@ -1,0 +1,30 @@
+{
+  "name": "bintang-jaya-farm-backend",
+  "version": "1.0.0",
+  "description": "Backend API dan manajemen upload gambar tanaman hias untuk UMKM Bintang Jaya Farm",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "bintang-jaya-farm",
+    "tanaman-hias",
+    "express",
+    "multer",
+    "image-upload",
+    "umkm",
+    "rest-api"
+  ],
+  "author": "Bintang Jaya Farm",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
